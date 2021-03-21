@@ -1,0 +1,23 @@
+.item {
+  text-align: left;
+  max-width: 500px;
+  min-width: 250px;
+  width: 100%;
+  margin: 1em;
+}
+
+.item span {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #333;
+}
+
+.left {
+  width: 75%;
+  display: inline-block;
+  word-wrap: break-word;
+}
+
+.right {
+  width: 15%;
+}

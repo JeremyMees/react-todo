@@ -1,0 +1,8 @@
+.list {
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 5px;
+  max-width: 500px;
+  min-width: 250px;
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
