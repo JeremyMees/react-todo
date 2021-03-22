@@ -1,15 +1,13 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect, useState } from "react";
-
+import "./index.css";
 import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
-
 import NavbarComponent from "./Navbar/NavbarComponent";
 import Modal from "./Modal/ModalComponent";
 import List from "./List/ListComponent";
-
 import { firestore } from "./firebase";
 
 function App() {
@@ -26,7 +24,6 @@ function App() {
         dataArray.push({ ...doc.data(), id: doc.id });
       });
       setPosts(dataArray);
-      console.log(dataArray);
     });
   }, []);
 
@@ -45,23 +42,28 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <NavbarComponent />
-      </header>
       <div className="container">
-        <form onSubmit={addTodo}>
-          <InputGroup className="mb-3 form">
-            <FormControl placeholder="Add todo" type="text" onChange={updateInput} id="input" />
-            <InputGroup.Append>
-              <Button variant="info" type="submit">
-                Add
-              </Button>
-            </InputGroup.Append>
-          </InputGroup>
-        </form>
-        <List posts={posts} />
-        <Modal className="modal-button" />
+        <header className="App-header">
+          <NavbarComponent />
+        </header>
+        <h1 className="title">
+          <b>Todo list</b>
+        </h1>
+        <div className="centered">
+          <form onSubmit={addTodo}>
+            <InputGroup className="mb-3 form">
+              <FormControl placeholder="Add todo" type="text" onChange={updateInput} id="input" />
+              <InputGroup.Append>
+                <Button variant="info" type="submit">
+                  Add
+                </Button>
+              </InputGroup.Append>
+            </InputGroup>
+          </form>
+          <List posts={posts} />
+        </div>
       </div>
+      <Modal />
     </div>
   );
 }

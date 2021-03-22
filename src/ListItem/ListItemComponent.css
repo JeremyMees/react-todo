@@ -3,7 +3,7 @@
   max-width: 500px;
   min-width: 250px;
   width: 100%;
-  margin: 1em;
+  margin-bottom: 1em;
 }
 
 .item span {
@@ -13,11 +13,11 @@
 }
 
 .left {
-  width: 75%;
+  width: 89%;
   display: inline-block;
   word-wrap: break-word;
 }
 
 .right {
-  width: 15%;
+  width: 11%;
 }

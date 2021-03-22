@@ -12,7 +12,7 @@ function Item(props) {
   return (
     <div className="item">
       <span className="left">{props.task}</span>
-      <Button variant="info" className="right" onClick={deleteItem}>
+      <Button variant="info" className="right" size="sm" onClick={deleteItem}>
         x
       </Button>
     </div>
